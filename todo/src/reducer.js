@@ -7,9 +7,14 @@ const initialState = {
 export default function(state = initialState, action) {
     switch (action.type) {
         case ADD_TODO: {
-            const todo = action.todo
-            const newTodos = state.todos.concat(todo)
-            return [...state, newTodos]
+            console.log(action.todo)
+            const value = action.todo
+            const newTodo = {
+                value: value,
+                completed: false
+            }
+            console.log(newTodo)
+            return { ...state, newTodo }
         }
         default:
 			return state
