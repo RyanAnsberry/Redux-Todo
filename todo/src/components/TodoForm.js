@@ -22,6 +22,7 @@ class TodoForm extends React.Component {
         e.preventDefault()
 
         const { todo } = this.state
+        console.log(todo)
         this.props.addTodo(todo)
         this.setState({
              todo: '' 
@@ -44,7 +45,7 @@ class TodoForm extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		todo: state.todo
+		todos: state.todos
 	}
 }
 

@@ -1,11 +1,16 @@
-// action type
-export const ADD_TODO = 'ADD_TODO'
+export const NEW_TODO = 'NEW_TODO';
+export const TOGGLE_COMPLETE = 'TOGGLE_COMPLETE';
 
-// action creator
-export function addTodo(todo) {
-    // action 
-    return {
-        type: ADD_TODO,
-        todo: todo
-    }
-}
+export const addTodo = (todo) => {
+  return {
+    type: NEW_TODO,
+    payload: todo
+  };
+};
+
+export const toggleComplete = (index) => {
+  return {
+    type: TOGGLE_COMPLETE,
+    payload: index
+  };
+};
